@@ -9,7 +9,7 @@ timestamp <- strptime(paste(consumption_tbl$Date, consumption_tbl$Time, sep = ":
 
 # Create PNG file containing line graph of global active power measurments over the two day period 
 png(file = "plot2.png", height = 480, width = 480)
-par(mar = c(5, 5, 5, 2))
+par(mar = c(5, 4, 5, 2))
 plot(timestamp, consumption_tbl$Global_active_power, type = "l", xaxt = "n", xlab = "", ylab = "Global Active Power (kilowatts)", oma = 50)
 tickmarks <- seq(as.POSIXct("2007-02-01"), as.POSIXct("2007-02-03"), by = "days")
 axis.POSIXct(side = 1, at = tickmarks, labels = TRUE)

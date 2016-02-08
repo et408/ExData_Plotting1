@@ -9,7 +9,7 @@ timestamp <- strptime(paste(consumption_tbl$Date, consumption_tbl$Time, sep = ":
 
 # Create PNG file containing line graphs of sub metering measurments over the two day period 
 png(file = "plot4.png", height = 480, width = 480)
-par(mfrow = c(2, 2), mar = c(5, 5, 5, 2), cex = .75)
+par(mfrow = c(2, 2), mar = c(5, 4, 5, 2), cex = .75)
 with(consumption_tbl, {
     tickmarks <- seq(as.POSIXct("2007-02-01"), as.POSIXct("2007-02-03"), by = "days")
     # Plot upper left chart of global active power over time

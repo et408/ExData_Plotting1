@@ -6,6 +6,6 @@ names(consumption_tbl) <- c("Date","Time","Global_active_power","Global_reactive
 
 # Create PNG file containing histogram of frequencies for global active power 
 png(file = "plot1.png", height = 480, width = 480)
-par(mar = c(5, 5, 5, 2))
+par(mar = c(5, 4, 5, 2))
 hist(consumption_tbl$Global_active_power, freq = TRUE, col = "red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)", ylab = "Frequency")
 dev.off()

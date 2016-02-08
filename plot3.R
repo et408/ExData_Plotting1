@@ -9,7 +9,7 @@ timestamp <- strptime(paste(consumption_tbl$Date, consumption_tbl$Time, sep = ":
 
 # Create PNG file containing line graphs of sub metering measurments over the two day period 
 png(file = "plot3.png", height = 480, width = 480)
-par(mar = c(5, 5, 5, 2))
+par(mar = c(5, 4, 5, 2))
 plot(timestamp, consumption_tbl$Sub_metering_1, type = "l", xaxt = "n", col = "black", xlab = "", ylab = "Energy sub metering")
 lines(timestamp, consumption_tbl$Sub_metering_2, type = "l", xaxt = "n", col = "red", yaxt = "n")
 lines(timestamp, consumption_tbl$Sub_metering_3, type = "l", xaxt = "n", col = "blue", yaxt = "n")
